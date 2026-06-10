@@ -850,6 +850,41 @@
       .sticky-price strong { font-size: 22px; }
       .sticky-cta .btn { font-size: 21px; }
     }
+    /* ── FLOATING TOAST MESSAGE ── */
+.toast-message {
+  position: fixed;
+  left: 50%;
+  bottom: 110px;
+  transform: translateX(-50%) translateY(20px);
+  width: calc(100% - 48px);
+  max-width: 680px;
+  padding: 24px 28px;
+  border-radius: 18px;
+  background: #2C2620;
+  color: #fff;
+  font-size: 26px;
+  font-weight: 700;
+  line-height: 1.5;
+  text-align: center;
+  box-shadow: 0 8px 28px rgba(0,0,0,0.22);
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.28s ease;
+  z-index: 2000;
+}
+
+.toast-message.show {
+  opacity: 1;
+  transform: translateX(-50%) translateY(0);
+}
+
+.toast-message.success {
+  background: #2f7d4f;
+}
+
+.toast-message.error {
+  background: #d93d3d;
+}
   </style>
 </head>
 <body>
@@ -1277,7 +1312,7 @@
       // 전화번호 간단 검증 (한국 휴대폰)
       const phone = (payload.phone || "").replace(/[^0-9]/g, "");
       if (!/^01[016789][0-9]{7,8}$/.test(phone)) {
-        setMessage("연락처를 다시 확인해주세요. 예: 01012345678", "error");
+        showToast("연락처를 다시 확인해주세요. 예: 01012345678", "error");
         return;
       }
       payload.phone = phone;
@@ -1285,7 +1320,7 @@
       payload.referrer = document.referrer || "";
 
       if (!FORM_ENDPOINT) {
-        setMessage("폼 연동 주소가 아직 입력되지 않았습니다. Apps Script 배포 후 FORM_ENDPOINT를 입력해주세요.", "error");
+        showToast("폼 연동 주소가 아직 입력되지 않았습니다. Apps Script 배포 후 FORM_ENDPOINT를 입력해주세요.", "error");
         return;
       }
 
@@ -1301,14 +1336,14 @@
           body: JSON.stringify(payload)
         });
 
-        setMessage("상담 신청이 접수되었습니다. 담당자가 순차적으로 연락드릴게요.", "success");
+        showToast("상담 신청이 접수되었습니다. 담당자가 순차적으로 연락드릴게요.", "success");
         leadForm.reset();
 
         // 전환 이벤트 (픽셀 연동 후 자동 작동)
         if (window.fbq) fbq("track", "Lead");
         if (window.gtag) gtag("event", "generate_lead");
       } catch (error) {
-        setMessage("전송 중 오류가 발생했습니다. 잠시 후 다시 시도해주세요.", "error");
+        showToast("접수 중 문제가 발생했습니다. 잠시 후 다시 시도해주세요.", "error");
       } finally {
         submitButton.disabled = false;
         submitButton.textContent = "내 렌탈료 안내받기";
@@ -1325,7 +1360,20 @@
       });
     }, { threshold: 0.12 });
     document.querySelectorAll(".reveal").forEach(el => io.observe(el));
+    function showToast(message, type = "success") {
+  const toast = document.getElementById("toastMessage");
+
+  if (!toast) return;
+
+  toast.textContent = message;
+  toast.className = `toast-message ${type} show`;
+
+  setTimeout(() => {
+    toast.className = `toast-message ${type}`;
+  }, 3200);
+}
   </script>
+  <div id="toastMessage" class="toast-message"></div>
 
 </body>
 </html>
