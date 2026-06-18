@@ -95,7 +95,7 @@
     .hero-kick{display:inline-block;margin:22px 0 14px;padding:7px 15px;border-radius:999px;background:var(--navy);color:#fff;font-size:14px;font-weight:700}
     .hero h1{margin-bottom:16px}
     .hero-sub{color:#4c5566;font-size:17px;line-height:1.74;margin-bottom:22px}
-    .hero-slot{margin:8px 0 24px;min-height:330px;border-radius:18px;box-shadow:var(--shadow)}
+    .hero-slot{margin:8px 0 24px;min-height:330px;border-radius:18px;box-shadow:var(--shadow);overflow:hidden}
     .price-teaser{margin-bottom:20px;padding:20px 22px;border-radius:16px;background:var(--cream);border:1px solid var(--line);box-shadow:var(--shadow-sm)}
     .price-teaser .cap{font-size:14.5px;color:var(--muted);font-weight:700}
     .price-teaser .row{display:flex;align-items:baseline;gap:6px;margin-top:4px}
@@ -139,7 +139,7 @@
     .feature{background:var(--sand)}
     .feat-3{margin-top:24px;display:grid;gap:16px}
     .feat-card{background:var(--cream);border:1px solid var(--line);border-radius:16px;overflow:hidden;box-shadow:var(--shadow-sm)}
-    .feat-card .img-slot{min-height:180px;border:0;border-radius:0;border-bottom:1px solid var(--line)}
+    .feat-card .feat-img{border-bottom:1px solid var(--line);overflow:hidden}
     .feat-card .body{padding:22px}
     .feat-no{display:inline-grid;place-items:center;width:32px;height:32px;border-radius:50%;background:var(--navy);color:#fff;font-size:14px;font-weight:900;margin-bottom:12px}
     .feat-card h3{font-size:19px;font-weight:800;color:var(--navy);margin-bottom:8px;letter-spacing:-.02em}
@@ -266,8 +266,8 @@
       <h1 class="h-display">마사지샵 두 번 갈 돈으로,<br>집에서 매일 받는 전신 안마</h1>
       <p class="hero-sub">상·하체 따로 움직임이 가능한 더블모션. 예약도, 외출도 없이 하루의 끝을 풉니다.</p>
 
-      <div class="hero-slot img-slot" role="img" aria-label="밝은 거실에 놓인 코지마 더블모션 CMC-A550 안마의자">
-        <span>제품 이미지<br>assets/hero-product.webp</span>
+      <div class="hero-slot">
+        <img src="assets/hero-room.webp" alt="밝은 거실에 놓인 코지마 더블모션 CMC-A550 안마의자" loading="eager">
       </div>
        <div class="assure">
         <h3>안심하고 신청하세요</h3>
@@ -349,7 +349,7 @@
 
       <div class="feat-3">
         <article class="feat-card">
-          <div class="img-slot"><span>assets/feature-dual-engine.webp</span></div>
+          <div class="feat-img"><img src="assets/dual-engine.webp" alt="상·하체 독립 듀얼 엔진" loading="lazy"></div>
           <div class="body">
             <span class="feat-no">01</span>
             <h3>상·하체 독립 듀얼 엔진</h3>
@@ -357,7 +357,7 @@
           </div>
         </article>
         <article class="feat-card">
-          <div class="img-slot"><span>assets/feature-motion-frame.webp</span></div>
+          <div class="feat-img"><img src="assets/motion-frame.webp" alt="최대 170° 모션 프레임 무중력 자세" loading="lazy"></div>
           <div class="body">
             <span class="feat-no">02</span>
             <h3>최대 170° 모션 프레임</h3>
@@ -365,7 +365,7 @@
           </div>
         </article>
         <article class="feat-card">
-          <div class="img-slot"><span>assets/feature-body-scan.webp</span></div>
+          <div class="feat-img"><img src="assets/body-scan-zero-gravity.webp" alt="자동 체형 측정" loading="lazy"></div>
           <div class="body">
             <span class="feat-no">03</span>
             <h3>자동 체형 측정</h3>
@@ -553,7 +553,7 @@
     </footer>
 
     <div class="sticky">
-      <a class="btn" href="#apply-1" data-cta="sticky">무료로 렌탈 신청하기 <span class="arr">→</span></a>
+      <a class="btn" href="#apply-1" data-cta="sticky">무료 렌탈 신청하기 <span class="arr">→</span></a>
     </div>
   </div>
 
