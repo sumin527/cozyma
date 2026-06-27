@@ -25,6 +25,8 @@ body{margin:0;word-break:keep-all;-webkit-font-smoothing:antialiased;background:
   font-family:'Pretendard','Apple SD Gothic Neo',system-ui,-apple-system,sans-serif;color:#3b362d}
 img{display:block;max-width:100%}
 button,input,select,textarea{font:inherit;color:inherit}
+@keyframes badge-pulse{0%,100%{box-shadow:0 0 0 0 rgba(214,52,43,.65)}60%{box-shadow:0 0 0 10px rgba(214,52,43,0)}}
+.ev-badge{animation:badge-pulse 2s ease-out infinite}
 </style>
 </head>
 <body>
@@ -33,7 +35,7 @@ button,input,select,textarea{font:inherit;color:inherit}
 -->
 
 <div style="min-height:100vh;background:#e7e5df">
-      <div style="width:100%;max-width:520px;margin:0 auto;background:#0f1c33;box-shadow:0 3px 16px rgba(21,36,62,.16);overflow:hidden">
+      <div style="width:100%;max-width:520px;margin:0 auto;background:#0f1c33;box-shadow:0 3px 16px rgba(21,36,62,.16);overflow:hidden;padding-bottom:80px">
 
         <!-- 1. HERO -->
         <header style="background:radial-gradient(120% 80% at 75% 0%,#22365c 0%,#15243e 55%,#0f1c33 100%);color:#fff;padding:24px 26px 34px">
@@ -41,14 +43,14 @@ button,input,select,textarea{font:inherit;color:inherit}
             <span style="font-size:20px;font-weight:900;letter-spacing:.18em;color:#fff">COZYMA</span>
             <span style="font-size:12.5px;font-weight:700;color:#c9a96a;letter-spacing:.04em">더블모션 · CMC-A550</span>
           </div>
-          <span style="display:inline-block;margin:22px 0 14px;padding:7px 15px;border-radius:8px;background:#d6342b;color:#fff;font-size:13px;font-weight:900;letter-spacing:.01em">이 페이지 한정 렌탈 EVENT</span>
-          <h1 style="margin:0 0 14px;font-size:34px;line-height:1.22;letter-spacing:-.04em;font-weight:900;color:#fff">마사지샵 두 번 갈 돈으로,<br>집에서 매일 받는<br><span style="color:#e8a23a">전신 안마.</span></h1>
+          <span class="ev-badge" style="display:inline-block;margin:22px 0 14px;padding:7px 15px;border-radius:8px;background:#d6342b;color:#fff;font-size:13px;font-weight:900;letter-spacing:.01em">이 페이지 한정 렌탈 EVENT</span>
+          <h1 style="margin:0 0 14px;font-size:34px;line-height:1.22;letter-spacing:-.04em;font-weight:900;color:#fff">마사지샵 두 번 갈 돈으로,<br>집에서 매일 받는 <span style="color:#e8a23a">전신 안마.</span></h1>
           <p style="margin:0 0 22px;font-size:16px;line-height:1.7;color:rgba(255,255,255,.78)">상·하체를 따로 움직이는 더블모션. 예약도, 외출도 없이 하루의 끝을 풉니다.</p>
           <div style="border-radius:16px;overflow:hidden;box-shadow:0 22px 46px rgba(0,0,0,.4);margin-bottom:22px">
             <img src="assets/hero-man.png" alt="코지마 더블모션 CMC-A550 안마의자에서 편안하게 쉬는 모습" width="1448" height="1086" style="width:100%;height:auto">
           </div>
           <div style="padding:22px;border-radius:16px;background:rgba(255,255,255,.06);border:1px solid rgba(201,169,106,.35);margin-bottom:18px">
-            <div style="font-size:14px;font-weight:700;color:rgba(255,255,255,.7)">코지마 더블모션 CMC-A550 · 60개월 약정</div>
+            <div style="font-size:14px;font-weight:700;color:rgba(255,255,255,.7)">코지마 더블모션 CMC-A550 · <span style="color:#e8a23a">60개월 약정</div>
             <div style="display:flex;align-items:baseline;gap:5px;margin-top:6px">
               <span style="font-size:18px;font-weight:900;color:#fff">월</span>
               <span style="font-size:50px;font-weight:900;letter-spacing:-.045em;color:#ff5b4a;line-height:.95">74,900</span>
@@ -57,10 +59,10 @@ button,input,select,textarea{font:inherit;color:inherit}
             <div style="margin-top:10px;font-size:13.5px;font-weight:800;color:#c9a96a">초기비용 0원 · 배송설치비 0원 · 렌탈기간 코지마 공식 A/S 지원</div>
           </div>
           <div style="display:flex;align-items:flex-start;gap:9px;margin-bottom:18px">
-            <span style="flex:none;padding:5px 11px;border-radius:8px;background:#d6342b;color:#fff;font-size:12.5px;font-weight:900;white-space:nowrap">이 페이지 한정</span>
+            <span class="ev-badge" style="flex:none;padding:5px 11px;border-radius:8px;background:#d6342b;color:#fff;font-size:12.5px;font-weight:900;white-space:nowrap">이 페이지 한정</span>
             <span style="font-size:14px;font-weight:800;color:#fff;line-height:1.5">설치 시 렌탈비 3개월 지원 + 코지마 손·복부 마사지기 증정</span>
           </div>
-          <button type="button" style="display:flex;align-items:center;justify-content:center;gap:8px;width:100%;min-height:66px;padding:18px;border:0;border-radius:14px;background:linear-gradient(135deg,#d99a3f,#b67a2c);color:#fff;font-size:19px;font-weight:900;letter-spacing:-.01em;cursor:pointer;box-shadow:0 16px 34px rgba(182,122,44,.4)" data-scroll-to-form="1">내 렌탈료 1분 만에 확인하기 <span style="font-weight:900">→</span></button>
+          <button type="button" style="display:flex;align-items:center;justify-content:center;gap:8px;width:100%;min-height:66px;padding:18px;border:0;border-radius:14px;background:linear-gradient(135deg,#d99a3f,#b67a2c);color:#fff;font-size:19px;font-weight:900;letter-spacing:-.01em;cursor:pointer;box-shadow:0 16px 34px rgba(182,122,44,.4)" data-scroll-to-form="1">렌탈 신청 바로가기 <span style="font-weight:900">→</span></button>
           <p style="margin:12px 0 0;font-size:13.5px;color:rgba(255,255,255,.6);text-align:center;line-height:1.6">지금 결제·약정이 아닙니다. 상담원이 조건을 먼저 안내드리고,<br>배송 전이라면 무료로 취소할 수 있습니다.</p>
         </header>
 
@@ -73,7 +75,7 @@ button,input,select,textarea{font:inherit;color:inherit}
             <div style="display:flex;gap:14px;align-items:flex-start;padding:18px;border-radius:14px;background:rgba(255,255,255,.05);border-left:3px solid #ff5b4a"><span style="flex:none;width:30px;height:30px;border-radius:50%;display:grid;place-items:center;background:rgba(214,52,43,.25);color:#ff7a6b;font-weight:900;font-size:15px">2</span><p style="margin:0;font-size:16px;line-height:1.7;color:rgba(255,255,255,.94)">소파에서 일어설 때, 나도 모르게 손이 허리로 갑니다.</p></div>
             <div style="display:flex;gap:14px;align-items:flex-start;padding:18px;border-radius:14px;background:rgba(255,255,255,.05);border-left:3px solid #ff5b4a"><span style="flex:none;width:30px;height:30px;border-radius:50%;display:grid;place-items:center;background:rgba(214,52,43,.25);color:#ff7a6b;font-weight:900;font-size:15px">3</span><p style="margin:0;font-size:16px;line-height:1.7;color:rgba(255,255,255,.94)">시원하게 주무르고 싶지만, 예약하고 찾아가는 건 매번 미루게 됩니다.</p></div>
           </div>
-          <p style="margin:22px 0 0;text-align:center;font-size:16px;font-weight:800;color:#fff;line-height:1.6">그렇게 참고 넘긴 하루가 쌓여,<br>몸은 조금씩 더 굳어집니다.</p>
+          <p style="margin:22px 0 0;text-align:center;font-size:16px;font-weight:800;color:#fff;line-height:1.6">그렇게 참고 넘긴 하루가 쌓여, 몸은 조금씩 더 굳어집니다.</p>
           <div style="margin-top:26px;padding:30px 22px;border-radius:18px;text-align:center;background:linear-gradient(135deg,#22365c,#15243e);border:1px solid rgba(201,169,106,.3)">
             <span style="color:#c9a96a;font-weight:900;font-size:15px">늘 가족을 먼저 챙겨온 당신에게</span>
             <strong style="display:block;margin-top:8px;font-size:25px;font-weight:900;line-height:1.4;letter-spacing:-.025em;color:#fff">이제는, 나를 위한 것<br>하나쯤 괜찮습니다.</strong>
@@ -82,7 +84,7 @@ button,input,select,textarea{font:inherit;color:inherit}
 
         <!-- 3. 가치 -->
         <section style="background:#fffdf8;padding:56px 26px">
-          <div style="display:inline-flex;align-items:center;gap:8px;margin-bottom:14px"><span style="width:22px;height:2px;background:#d6342b"></span><span style="font-size:15px;font-weight:900;letter-spacing:.12em;white-space:nowrap;color:#a8814e">왜 렌탈일까요</span></div>
+          <div style="display:inline-flex;align-items:center;gap:8px;margin-bottom:14px"><span style="width:22px;height:2px;background:#d6342b"></span><span style="font-size:15px;font-weight:900;letter-spacing:.12em;white-space:nowrap;color:#a8814e">왜 렌탈일까요? </span></div>
           <h2 style="margin:0 0 14px;font-size:29px;line-height:1.26;letter-spacing:-.035em;font-weight:900;color:#15243e">큰돈 들이지 않고,<br>오늘부터 시작합니다.</h2>
           <p style="margin:0;font-size:16px;line-height:1.7;color:#8c8475">수백만 원 목돈 대신, 매달 부담 없는 금액으로 매일 누리세요.</p>
           <div style="margin:22px 0;border-radius:18px;overflow:hidden">
@@ -90,12 +92,12 @@ button,input,select,textarea{font:inherit;color:inherit}
           </div>
           <div style="padding:26px;border-radius:18px;text-align:center;background:linear-gradient(135deg,#22365c,#15243e);color:#fff;box-shadow:0 16px 38px rgba(21,36,62,.22)">
             <div style="font-size:14px;color:rgba(255,255,255,.72);font-weight:700">코지마 더블모션 CMC-A550 렌탈</div>
-            <div style="margin-top:5px;font-size:32px;font-weight:900;letter-spacing:-.03em">월 <span style="color:#ff5b4a">74,900</span>원</div>
+            <div style="margin-top:5px;font-size:32px;font-weight:900;letter-spacing:-.03em"> <span style="color:#ff5b4a">39개월 / 48개월 / 60개월 </span> 선택</div>
           </div>
           <div style="margin-top:18px;display:flex;flex-direction:column;gap:12px">
-            <div style="display:flex;gap:12px;align-items:center;padding:17px 18px;border-radius:13px;background:#f7f1e7;border-left:3px solid #2f7a52"><span style="flex:none;width:28px;height:28px;border-radius:50%;background:#2f7a52;color:#fff;display:grid;place-items:center;font-size:15px;font-weight:900">✓</span><span style="font-size:15.5px"><b style="color:#15243e">초기비용 0원</b> — 등록·배송·설치 무료</span></div>
+            <div style="display:flex;gap:12px;align-items:center;padding:17px 18px;border-radius:13px;background:#f7f1e7;border-left:3px solid #2f7a52"><span style="flex:none;width:28px;height:28px;border-radius:50%;background:#2f7a52;color:#fff;display:grid;place-items:center;font-size:15px;font-weight:900">✓</span><span style="font-size:15.5px"><b style="color:#15243e">초기비용 0원</b> — 등록·배송·설치 무료, 렌탈 종료 자동소유</span></div>
             <div style="display:flex;gap:12px;align-items:center;padding:17px 18px;border-radius:13px;background:#f7f1e7;border-left:3px solid #2f7a52"><span style="flex:none;width:28px;height:28px;border-radius:50%;background:#2f7a52;color:#fff;display:grid;place-items:center;font-size:15px;font-weight:900">✓</span><span style="font-size:15.5px"><b style="color:#15243e">렌탈기간 코지마 공식 A/S 지원</b></span></div>
-            <div style="display:flex;gap:12px;align-items:center;padding:17px 18px;border-radius:13px;background:#f7f1e7;border-left:3px solid #2f7a52"><span style="flex:none;width:28px;height:28px;border-radius:50%;background:#2f7a52;color:#fff;display:grid;place-items:center;font-size:15px;font-weight:900">✓</span><span style="font-size:15.5px"><b style="color:#15243e">설치 전 무료 취소</b> — 위약금 없이</span></div>
+            <div style="display:flex;gap:12px;align-items:center;padding:17px 18px;border-radius:13px;background:#f7f1e7;border-left:3px solid #2f7a52"><span style="flex:none;width:28px;height:28px;border-radius:50%;background:#2f7a52;color:#fff;display:grid;place-items:center;font-size:15px;font-weight:900">✓</span><span style="font-size:15.5px"><b style="color:#15243e">설치 전 에는 무료 취소</b> — 위약금 없이</span></div>
           </div>
         </section>
 
@@ -126,7 +128,7 @@ button,input,select,textarea{font:inherit;color:inherit}
               <p style="margin:0;font-size:14.5px;color:rgba(255,255,255,.72);line-height:1.65">어깨·체형을 읽어 내 몸에 맞는 위치를 찾습니다.</p>
             </article>
           </div>
-          <a href="https://point-rental.com/products/view/4254" target="_blank" rel="noopener" style="display:flex;align-items:center;justify-content:center;gap:8px;width:100%;min-height:56px;border-radius:14px;background:transparent;color:#fff;border:1.5px solid rgba(255,255,255,.35);font-size:16px;font-weight:800;text-decoration:none">A550 상세 스펙 보기 <span style="font-weight:900">→</span></a>
+          <a href="https://point-rental.com/products/view/4254" target="_blank" rel="noopener" style="display:flex;align-items:center;justify-content:center;gap:8px;width:100%;min-height:56px;border-radius:14px;background:transparent;color:#fff;border:1.5px solid rgba(255,255,255,.35);font-size:16px;font-weight:800;text-decoration:none">안마의자 상세 스펙이 궁금하다면? <span style="font-weight:900">→</span></a>
         </section>
 
         <!-- 6. 가격 -->
@@ -153,7 +155,7 @@ button,input,select,textarea{font:inherit;color:inherit}
             <div style="padding:18px;border-radius:14px;background:#15243e;color:#fff;text-align:center"><span style="display:block;font-size:13px;color:rgba(255,255,255,.66)">등록·초기 비용</span><b style="display:block;margin-top:3px;font-size:27px;font-weight:900;color:#fff">0원</b></div>
             <div style="padding:18px;border-radius:14px;background:#15243e;color:#fff;text-align:center"><span style="display:block;font-size:13px;color:rgba(255,255,255,.66)">배송·설치비</span><b style="display:block;margin-top:3px;font-size:27px;font-weight:900;color:#fff">0원</b></div>
           </div>
-          <p style="margin:16px 0 0;font-size:13px;color:#8c8475;line-height:1.6;text-align:center">의무사용기간·중도해약·소유권 이전 조건은 계약서에서 최종 확인하세요.</p>
+          <p style="margin:16px 0 0;font-size:13px;color:#8c8475;line-height:1.6;text-align:center">렌탈기간 종료시 반납 없이 자동으로 소유권 이전, 쓰던 그대로 사용하세요</p>
         </section>
 
         <!-- 7. 사은품 -->
@@ -162,7 +164,7 @@ button,input,select,textarea{font:inherit;color:inherit}
           <h2 style="margin:0 0 14px;font-size:29px;line-height:1.26;letter-spacing:-.035em;font-weight:900;color:#fff">여기서 신청해야<br>받을 수 있는 혜택.</h2>
           <p style="margin:0;font-size:16px;line-height:1.7;color:rgba(255,255,255,.78)">본 페이지를 통해 신청·설치하신 분께만 드립니다.</p>
           <div style="margin-top:24px;padding:30px 18px 24px;border-radius:22px;background:linear-gradient(135deg,#fff7e9,#ffeccd);box-shadow:0 24px 56px rgba(0,0,0,.4)">
-            <div style="text-align:center;margin-bottom:18px"><span style="display:inline-flex;align-items:center;gap:7px;padding:8px 18px;border-radius:999px;background:#d6342b;color:#fff;font-size:14px;font-weight:900;box-shadow:0 8px 20px rgba(214,52,43,.35)">이 페이지 한정 · 2종 동시 증정</span></div>
+            <div style="text-align:center;margin-bottom:18px"><span class="ev-badge" style="display:inline-flex;align-items:center;gap:7px;padding:8px 18px;border-radius:999px;background:#d6342b;color:#fff;font-size:14px;font-weight:900">이 페이지 한정 · 2종 동시 증정</span></div>
             <div style="display:flex;flex-direction:column;gap:13px">
               <div style="display:flex;align-items:center;gap:15px;padding:17px;border-radius:16px;background:#fff;border:1px solid #f0dcb8;box-shadow:0 6px 16px rgba(21,36,62,.08)">
                 <span style="flex:none;width:54px;height:54px;border-radius:14px;background:linear-gradient(135deg,#d6342b,#b0271f);color:#fff;display:grid;place-items:center;font-size:13px;font-weight:900;line-height:1.1;text-align:center">3개월<br>지원</span>
@@ -209,12 +211,12 @@ button,input,select,textarea{font:inherit;color:inherit}
           <h2 style="margin:0 0 14px;font-size:28px;line-height:1.3;letter-spacing:-.035em;font-weight:900;color:#fff">오늘 하루도 고생한 내 몸,<br>이제는 챙겨주세요.</h2>
           <p style="margin:0;font-size:15.5px;line-height:1.7;color:rgba(255,255,255,.74)">지금 결제되지 않습니다. 남겨주신 번호로 정확한 렌탈료와 설치 일정을 안내드리며, 배송 전이라면 위약금 없이 취소할 수 있습니다.</p>
           <form id="leadForm" data-leadform="B" novalidate="" action="https://script.google.com/macros/s/AKfycbxZBNAK31VUpGBPjbwgkiGQNaR-1QRTddNMasF-ZV2J3yQdbktbv2ZrOHoaAGkveY2F/exec" method="POST" style="margin-top:24px;padding:24px;border-radius:18px;background:#fffdf8;box-shadow:0 16px 38px rgba(0,0,0,.3)">
-            <div style="margin-bottom:17px"><label style="display:block;margin-bottom:8px;font-size:15px;font-weight:800;color:#15243e">이름 <span style="color:#d6342b">*</span></label><input name="name" type="text" autocomplete="name" placeholder="이름을 입력해주세요" style="width:100%;min-height:56px;padding:14px 16px;border:1.5px solid #c9cdd6;border-radius:12px;background:#fff;font-size:16px;outline:none;color:#15243e"></div>
+            <div style="margin-bottom:17px"><label style="display:block;margin-bottom:8px;font-size:15px;font-weight:800;color:#15243e">이름 <span style="color:#d6342b">*</span></label><input name="name" type="text" autocomplete="name" placeholder="계약자 성함 입력해주세요" style="width:100%;min-height:56px;padding:14px 16px;border:1.5px solid #c9cdd6;border-radius:12px;background:#fff;font-size:16px;outline:none;color:#15243e"></div>
             <div style="margin-bottom:17px"><label style="display:block;margin-bottom:8px;font-size:15px;font-weight:800;color:#15243e">연락처 <span style="color:#8c8475;font-weight:600;font-size:13px">(계약자 명의 번호 기재)</span> <span style="color:#d6342b">*</span></label><input name="phone" type="tel" inputmode="numeric" autocomplete="tel" placeholder="010-0000-0000" maxlength="13" style="width:100%;min-height:56px;padding:14px 16px;border:1.5px solid #c9cdd6;border-radius:12px;background:#fff;font-size:16px;outline:none;color:#15243e"></div>
             <div style="margin-bottom:17px"><label style="display:block;margin-bottom:8px;font-size:15px;font-weight:800;color:#15243e">렌탈 약정 기간 <span style="color:#d6342b">*</span></label><select name="rental_term" style="width:100%;min-height:56px;padding:14px 16px;border:1.5px solid #c9cdd6;border-radius:12px;background:#fff;font-size:16px;outline:none;appearance:none;color:#15243e"><option value="">약정기간을 선택해주세요</option><option value="39개월">39개월 · 월 109,900원</option><option value="48개월">48개월 · 월 89,900원 (추천)</option><option value="60개월">60개월 · 월 74,900원</option><option value="상담 후 결정">상담 후 결정</option></select></div>
             <div style="margin-bottom:17px"><label style="display:block;margin-bottom:8px;font-size:15px;font-weight:800;color:#15243e">문의사항 <span style="color:#8c8475;font-weight:600;font-size:13.5px">(선택)</span></label><textarea name="memo" placeholder="궁금한 점이나 요청사항을 자유롭게 적어주세요." style="width:100%;min-height:92px;padding:14px 16px;border:1.5px solid #c9cdd6;border-radius:12px;background:#fff;font-size:16px;outline:none;resize:vertical;line-height:1.6;color:#15243e"></textarea></div>
-            <div style="margin:4px 0 14px;padding:13px;border-radius:12px;background:#efe6d6;font-size:13px;color:#8c8475;text-align:center">[ Cloudflare Turnstile 봇 차단 위젯 자리 ]</div>
-            <div style="display:grid;grid-template-columns:24px 1fr;gap:10px;align-items:start;margin:4px 0 18px;padding:16px;border-radius:12px;background:#f7f1e7"><input name="privacy_agree" type="checkbox" value="Y" style="width:22px;height:22px;margin-top:2px;accent-color:#15243e"><label style="font-size:14.5px;color:#3b362d;line-height:1.6"><strong style="color:#15243e;font-weight:800">개인정보 수집·이용에 동의합니다. <span style="color:#d6342b">*</span></strong><br><span style="font-size:13px;color:#8c8475">수집: 이름·연락처·희망 약정기간·문의 / 목적: A550 렌탈 상담 / 보유: [보유 기간]</span></label></div>
+            <!-- <div style="margin:4px 0 14px;padding:13px;border-radius:12px;background:#efe6d6;font-size:13px;color:#8c8475;text-align:center">[ Cloudflare Turnstile 봇 차단 위젯 자리 ]</div> -->
+            <div style="display:grid;grid-template-columns:24px 1fr;gap:10px;align-items:start;margin:4px 0 18px;padding:16px;border-radius:12px;background:#f7f1e7"><input name="privacy_agree" type="checkbox" value="Y" style="width:22px;height:22px;margin-top:2px;accent-color:#15243e"><label style="font-size:14.5px;color:#3b362d;line-height:1.6"><strong style="color:#15243e;font-weight:800">개인정보 수집·이용에 동의합니다. <span style="color:#d6342b">*</span></strong><br><span style="font-size:13px;color:#8c8475"></span></label></div>
             <button type="submit" style="display:flex;align-items:center;justify-content:center;gap:8px;width:100%;min-height:66px;border:0;border-radius:14px;background:linear-gradient(135deg,#d99a3f,#b67a2c);color:#fff;font-size:19px;font-weight:900;cursor:pointer;box-shadow:0 16px 34px rgba(182,122,44,.36)">지금 렌탈 신청하기</button>
             <p style="margin:12px 0 0;font-size:13.5px;color:#8c8475;text-align:center;line-height:1.6">신청 후 상담원이 확인 연락을 드립니다. 지금은 결제되지 않습니다.</p>
             <div data-status="" role="status" aria-live="polite" style="display:none;margin-top:14px;padding:15px;border-radius:11px;font-size:15px;font-weight:800;text-align:center"></div>
@@ -223,16 +225,16 @@ button,input,select,textarea{font:inherit;color:inherit}
 
         <!-- FOOTER -->
         <footer style="background:#0b1526;color:rgba(255,255,255,.6);font-size:13.5px;padding:34px 26px 30px;line-height:1.8">
-          <div style="margin-bottom:18px"><strong style="display:block;color:#fff;margin-bottom:8px;font-size:14.5px">코지마 CMC-A550 렌탈 상담</strong>상호: 아이엠아이(IMI) · 대표자 [대표자]<br>사업자등록번호 [사업자등록번호]<br>주소 [사업장 주소] · 고객센터 [연락처]</div>
-          <div><strong style="display:block;color:#fff;margin-bottom:8px;font-size:14.5px">렌탈 유의사항</strong>배송 전 취소 시 위약금이 없으며, 의무사용기간·중도해약·소유권 이전 조건은 계약서에서 최종 확인하세요. 본 페이지는 LG헬로비전 공식 파트너 대리점 아이엠아이가 운영합니다.</div>
+          <div style="margin-bottom:18px"><strong style="display:block;color:#fff;margin-bottom:8px;font-size:14.5px">코지마 CMC-A550 렌탈 상담 1600-6308</strong></div>
+          <div><strong style="display:block;color:#fff;margin-bottom:8px;font-size:14.5px">렌탈 유의사항</strong>가전제품 렌탈은 만25세~70세 국내 거주자만 가입이 가능합니다. 당사 가입규정에 따라 가입이 제한 될 수 있습니다. 배송 전 취소 시 위약금이 없으며, 의무사용기간·중도해약·소유권 이전 조건은 계약서에서 최종 확인하세요. 본 페이지는 LG헬로비전 공식 파트너 대리점 포인트렌탈이 운영합니다.</div>
         </footer>
 
-        <!-- STICKY CTA -->
-          <div style="position:sticky;bottom:0;z-index:20;padding:10px 12px;background:#0f1c33;border-top:1px solid rgba(255,255,255,.12);box-shadow:0 -8px 24px rgba(0,0,0,.3)">
-            <button type="button" style="display:flex;align-items:center;justify-content:center;gap:8px;width:100%;min-height:58px;border:0;border-radius:14px;background:linear-gradient(135deg,#d99a3f,#b67a2c);color:#fff;font-size:17px;font-weight:900;cursor:pointer" data-scroll-to-form="1">무료 렌탈 신청하기 <span style="font-weight:900">→</span></button>
-          </div>
-
       </div>
+</div>
+
+<!-- FLOATING CTA -->
+<div style="position:fixed;bottom:0;left:50%;transform:translateX(-50%);width:100%;max-width:520px;z-index:100;padding:10px 12px;background:#0f1c33;border-top:1px solid rgba(255,255,255,.12);box-shadow:0 -8px 24px rgba(0,0,0,.3)">
+  <button type="button" style="display:flex;align-items:center;justify-content:center;gap:8px;width:100%;min-height:58px;border:0;border-radius:14px;background:linear-gradient(135deg,#d99a3f,#b67a2c);color:#fff;font-size:17px;font-weight:900;cursor:pointer" data-scroll-to-form="1">렌탈 신청 바로가기 <span style="font-weight:900">→</span></button>
 </div>
 
 <!-- ===== [봇차단] 배포 시 활성화: Cloudflare Turnstile =====
