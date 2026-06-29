@@ -20,10 +20,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <meta property="og:image" content="REPLACE_WITH_ABSOLUTE_OG_IMAGE_URL">
 <meta property="og:type" content="website">
 
-<!-- ===== [추적] 배포 시 활성화: Google Tag Manager (head) =====
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-XXXXXXX');</script>
--->
-
 <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
 <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css">
@@ -39,9 +35,6 @@ button,input,select,textarea{font:inherit;color:inherit}
 </style>
 </head>
 <body>
-<!-- ===== [추적] 배포 시 활성화: GTM (noscript, body 최상단) =====
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-XXXXXXX" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
--->
 
 <div style="min-height:100vh;background:#e7e5df">
       <div style="width:100%;max-width:520px;margin:0 auto;background:#0f1c33;box-shadow:0 3px 16px rgba(21,36,62,.16);overflow:hidden;padding-bottom:80px">
@@ -59,7 +52,7 @@ button,input,select,textarea{font:inherit;color:inherit}
             <img src="assets/hero-man.png" alt="코지마 더블모션 CMC-A550 안마의자에서 편안하게 쉬는 모습" width="1448" height="1086" style="width:100%;height:auto">
           </div>
           <div style="padding:22px;border-radius:16px;background:rgba(255,255,255,.06);border:1px solid rgba(201,169,106,.35);margin-bottom:18px">
-            <div style="font-size:14px;font-weight:700;color:rgba(255,255,255,.7)">코지마 더블모션 CMC-A550 · <span style="color:#e8a23a">60개월 약정</div>
+            <div style="font-size:14px;font-weight:700;color:rgba(255,255,255,.7)">코지마 더블모션 CMC-A550 · <span style="color:#e8a23a">60개월 약정</span></div>
             <div style="display:flex;align-items:baseline;gap:5px;margin-top:6px">
               <span style="font-size:18px;font-weight:900;color:#fff">월</span>
               <span style="font-size:50px;font-weight:900;letter-spacing:-.045em;color:#ff5b4a;line-height:.95">74,900</span>
@@ -106,7 +99,7 @@ button,input,select,textarea{font:inherit;color:inherit}
           <div style="margin-top:18px;display:flex;flex-direction:column;gap:12px">
             <div style="display:flex;gap:12px;align-items:center;padding:17px 18px;border-radius:13px;background:#f7f1e7;border-left:3px solid #2f7a52"><span style="flex:none;width:28px;height:28px;border-radius:50%;background:#2f7a52;color:#fff;display:grid;place-items:center;font-size:15px;font-weight:900">✓</span><span style="font-size:15.5px"><b style="color:#15243e">초기비용 0원</b> — 등록·배송·설치 무료, 렌탈 종료 자동소유</span></div>
             <div style="display:flex;gap:12px;align-items:center;padding:17px 18px;border-radius:13px;background:#f7f1e7;border-left:3px solid #2f7a52"><span style="flex:none;width:28px;height:28px;border-radius:50%;background:#2f7a52;color:#fff;display:grid;place-items:center;font-size:15px;font-weight:900">✓</span><span style="font-size:15.5px"><b style="color:#15243e">렌탈기간 코지마 공식 A/S 지원</b></span></div>
-            <div style="display:flex;gap:12px;align-items:center;padding:17px 18px;border-radius:13px;background:#f7f1e7;border-left:3px solid #2f7a52"><span style="flex:none;width:28px;height:28px;border-radius:50%;background:#2f7a52;color:#fff;display:grid;place-items:center;font-size:15px;font-weight:900">✓</span><span style="font-size:15.5px"><b style="color:#15243e">설치 전 에는 무료 취소</b> — 위약금 없이</span></div>
+            <div style="display:flex;gap:12px;align-items:center;padding:17px 18px;border-radius:13px;background:#f7f1e7;border-left:3px solid #2f7a52"><span style="flex:none;width:28px;height:28px;border-radius:50%;background:#2f7a52;color:#fff;display:grid;place-items:center;font-size:15px;font-weight:900">✓</span><span style="font-size:15.5px"><b style="color:#15243e">설치 전에는 무료 취소</b> — 위약금 없이</span></div>
           </div>
         </section>
 
@@ -246,15 +239,10 @@ button,input,select,textarea{font:inherit;color:inherit}
   <button type="button" style="display:flex;align-items:center;justify-content:center;gap:8px;width:100%;min-height:58px;border:0;border-radius:14px;background:linear-gradient(135deg,#ffe345,#ffbf00);color:#15243e;font-size:25px;font-weight:900;cursor:pointer;box-shadow:0 4px 20px rgba(255,191,0,.5)" data-scroll-to-form="1">단독 혜택받고 렌탈 바로 신청하기 <span style="font-weight:900">→</span></button>
 </div>
 
-<!-- ===== [봇차단] 배포 시 활성화: Cloudflare Turnstile =====
-  1) head 또는 body에: <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
-  2) 폼 내 [Turnstile 자리] div를 다음으로 교체: <div class="cf-turnstile" data-sitekey="YOUR_SITE_KEY"></div>
--->
-
 <script>
 /* =====================================================================
    코지마 A550 렌탈 랜딩 — 폼/CTA 스크립트 (프레임워크 없음, 바닐라 JS)
-   배포 전 채울 자리: [추적] 주석
+   전환 신호: 폼 전송 성공 시 dataLayer에 generate_lead 푸시 → GTM이 Meta Lead 발사
    ===================================================================== */
 (function () {
   'use strict';
@@ -305,16 +293,17 @@ button,input,select,textarea{font:inherit;color:inherit}
     if (!term.value)                         return showStatus('error', '렌탈 약정 기간을 선택해주세요.', term);
     if (!consent.checked)                    return showStatus('error', '개인정보 수집·이용에 동의해주세요.', consent);
 
-    // [추적] 전환 이벤트 (배포 시 주석 해제)
-    // window.dataLayer = window.dataLayer || []; window.dataLayer.push({ event: 'generate_lead' }); // GA4/GTM
-    // if (window.fbq) fbq('track', 'Lead');                                                          // Meta Pixel
-
     var btn = form.querySelector('button[type="submit"]');
     if (btn) { btn.disabled = true; btn.style.opacity = '.6'; }
 
     fetch(form.getAttribute('action'), { method: 'POST', body: new FormData(form) })
       .then(function (r) { if (!r.ok) throw new Error('bad status'); return r; })
-      .then(function () { showStatus('success', '신청이 접수되었습니다. 상담원이 확인 후 연락드리겠습니다.'); form.reset(); })
+      .then(function () {
+        showStatus('success', '신청이 접수되었습니다. 상담원이 확인 후 연락드리겠습니다.');
+        window.dataLayer = window.dataLayer || [];
+        window.dataLayer.push({ event: 'generate_lead' });   // ← GTM이 받아서 Meta Lead 발사
+        form.reset();
+      })
       .catch(function () { showStatus('error', '일시적 오류로 접수에 실패했습니다. 잠시 후 다시 시도해주세요.'); })
       .finally(function () { if (btn) { btn.disabled = false; btn.style.opacity = '1'; } });
   });
